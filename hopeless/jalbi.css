@@ -1,0 +1,36 @@
+html {
+	/*overflow-y:hidden;*/
+	background: url('http://hdwallpaperfun.com/wp-content/uploads/2014/09/Sunset-City-New-York-Wallpaper-Free-Background-Desktop-Images-90123.jpg');
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+	width:100%;
+	min-height:100%;
+}
+
+form {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	text-align: justify;
+	font-size: 20px;
+	color: white;
+}
+
+#container {
+	width: 700px;
+	margin: 0 auto;
+	background-color: #000000;
+	border: 10px solid black;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+ 	left: 50%;
+	color: white;
+	font-weight:300;
+	text-align: justify;
+	font-size: 20px;
+}

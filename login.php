@@ -3,6 +3,7 @@
 <?php
 //	$username = $_POST["uxsername"];
 //	$password = $_POST["password"];
+session_start();
 	$host = "sql101.byethost24.com";
 	$username = "b24_16295096";
 	$password = "M@!KAti";
@@ -32,6 +33,7 @@ mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
 // username and password sent from form 
+$myID = $_POST['ID'];
 $myemail=$_POST['email']; 
 $mypassword=$_POST['password']; 
 
@@ -40,6 +42,11 @@ $myemail = stripslashes($myemail);
 $mypassword = stripslashes($mypassword);
 $myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
+
+
+$_SESSION['login_user'] = $myID;
+echo $_SESSION['login_user'];
+
 $sql="SELECT * FROM $tbl_name WHERE email='$myemail' and password='$mypassword'";
 $result=mysql_query($sql);
 
@@ -52,7 +59,9 @@ if($count==1){
 	// Register $myusername, $mypassword and redirect to file "login_success.php"
 	//session_register("myusername");
 	//session_register("mypassword"); 
+
 	header("location:welcome.html");
+ 
 }
 else {
 	//echo "Wrong Username or Password";

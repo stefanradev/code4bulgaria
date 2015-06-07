@@ -15,7 +15,7 @@ $res=mysql_query($sql);
 echo "$sql";
 If($res)
 {
-Echo "Record successfully inserted";
+Echo header("location:index.html");
 }
 Else
 {
